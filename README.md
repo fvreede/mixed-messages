@@ -1,2 +1,3 @@
-# Mixed Messages
-A portfolio project that's part of the Codecademy Pro Full-Stack Engineer career path. This project 
+# Mixed Message
+This project is part of the Codecademy Portfolio Projects within the Full-Stack engineer career path.
+
