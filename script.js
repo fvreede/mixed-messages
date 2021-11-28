@@ -1,4 +1,4 @@
-// Program generates random text on quotes, mostly fake quotes mashed up with random names.
+// Program generates random text on quotes, mostly fake quotes mashed up with random names and year of death.
 
 const msgObject = {
     quote: ['Be yourself; everyone else is already taken.',
