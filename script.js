@@ -16,3 +16,29 @@ const msgObject = {
     yearOfDeath: [1900, 1993, 1962, 1955, 1948],
     
 };
+
+function generateRandomArray(arr) {
+        return Math.floor(Math.random() * arr);
+}
+
+let message = []
+
+for (let arr in msgObject) {
+    let index = generateRandomArray(msgObject[arr].length);
+    switch (arr) {
+        case 'quote':
+            message.push(`${msgObject[arr][index]}`)
+            break;
+        case 'author':
+            message.push(`By: ${msgObject[arr][index]}.`)
+            break;
+        case 'yearOfDeath':
+            message.push(`Died in: ${msgObject[arr][index]}`)
+            break;
+        default:
+            message.push('Not enough data');
+            break;
+    }
+}
+
+console.log(message)
