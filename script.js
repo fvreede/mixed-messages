@@ -1,5 +1,6 @@
 // Program generates random text on quotes, mostly fake quotes mashed up with random names and year of death.
 
+// Stores arrays in an object
 const msgObject = {
     quote: ['Be yourself; everyone else is already taken.',
             'So many books, so little time.',
@@ -14,26 +15,27 @@ const msgObject = {
             'Mahatma Gandhi'],
 
     yearOfDeath: [1900, 1993, 1962, 1955, 1948],
-    
 };
 
-function generateRandomArray(arr) {
-        return Math.floor(Math.random() * arr);
+// Generates random numbers from 0 -> 1 or other non-floating numbers
+function generateRandomNumber(num) {
+        return Math.floor(Math.random() * num);
 }
 
+// Stores random data in a message array
 let message = []
 
-for (let arr in msgObject) {
-    let index = generateRandomArray(msgObject[arr].length);
-    switch (arr) {
+for (let num in msgObject) {
+    let index = generateRandomNumber(msgObject[num].length);
+    switch (num) {
         case 'quote':
-            message.push(`${msgObject[arr][index]}`)
+            message.push(`${msgObject[num][index]}`)
             break;
         case 'author':
-            message.push(`By: ${msgObject[arr][index]}.`)
+            message.push(`By: ${msgObject[num][index]}.`)
             break;
         case 'yearOfDeath':
-            message.push(`Died in: ${msgObject[arr][index]}`)
+            message.push(`Died in: ${msgObject[num][index]}`)
             break;
         default:
             message.push('Not enough data');
